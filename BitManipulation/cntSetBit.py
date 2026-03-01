@@ -21,3 +21,14 @@ def cnt(n):
     n=n>>1
   return c
 print(cnt(n))
+
+#3rd approach
+
+n=int(input())
+def cnt(n):
+  c=0
+  while n>0:
+    n &= (n - 1)
+    c+= 1
+  return c
+print(cnt(n))
