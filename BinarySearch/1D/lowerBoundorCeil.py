@@ -1,4 +1,4 @@
-#lower bound
+#lower bound, Ceil
 arr=list(map(int,input().split()))
 x=int(input())
 n=len(arr)
