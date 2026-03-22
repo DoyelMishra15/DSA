@@ -1,0 +1,21 @@
+def isvalid(s):
+  cnt=0
+  for i in s:
+    if i=='(':
+      cnt+=1 
+    else:
+      cnt-=1 
+    if cnt<0:
+      return False
+  return cnt==0
+def gen(s):
+  if len(s) == 2 * n:
+      if isvalid(s):
+          ans.append(s)
+      return
+  gen(s + "(")
+  gen(s + ")")
+ans=[]
+n=4
+gen("")
+print(ans)
