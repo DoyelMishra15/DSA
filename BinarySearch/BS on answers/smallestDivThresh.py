@@ -11,7 +11,7 @@ def can(arr,mid,k,n):
   
 def see(arr,k,n):
   ans=-1
-  l,r=min(arr),max(arr)
+  l,r=1,max(arr)
   while l<=r:
     mid=(l+r)//2
     if can(arr,mid,k,n)<=k:
