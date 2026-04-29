@@ -45,3 +45,9 @@ class DLL:
                 r = r.prev
         
         return res
+        
+dll = DLL()
+for x in [1,2,3,4,5,6,7]:
+    dll.insert_end(x)
+
+print(dll.find_pairs(8))
