@@ -4,7 +4,7 @@ class Solution:
         s=[]
         prev=-1
         for i in range(len(nums2)-1,-1,-1):
-            while s and s[-1]<=nums[i]:
+            while s and s[-1]<=nums2[i]:
                 s.pop()
             if not s:
                 res[i]=-1
