@@ -7,7 +7,7 @@ class Solution:
             if dq and dq[0]<=i-k:
                 dq.pop(0)
             while dq and nums[dq[-1]]<=nums[i]:
-                dq.pop(0)
+                dq.pop()
             dq.append(i)
             if i>=k-1:
                 res.append(nums[dq[0]])
