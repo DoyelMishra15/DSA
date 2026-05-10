@@ -17,3 +17,23 @@ class Solution:
             rec(idx+1,target,li)
         rec(0,target,[])
         return res
+
+
+class Solution:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+        candidates.sort()
+        res = []
+        def rec(idx, target, li):
+            if target == 0:
+                res.append(li[:])
+                return
+            for i in range(idx, len(candidates)):
+                if i > idx and candidates[i] == candidates[i - 1]:
+                    continue
+                if candidates[i] > target:
+                    break
+                li.append(candidates[i])
+                rec(i + 1, target - candidates[i], li)
+                li.pop()
+        rec(0, target, [])
+        return res
