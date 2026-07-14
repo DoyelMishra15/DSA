@@ -17,3 +17,23 @@ if n==0 or w==0:
 else:
     rec(0,wt,val,0,0)
     print(ans)
+
+
+
+wt=[1,3,4,5]
+val=[1,4,5,7]
+w=7
+n=len(wt)
+ans=-2**31
+def knapsack(n, W):
+    if n == 0 or W == 0:
+        return 0
+
+    if wt[n-1] <= W:
+        return max(
+            val[n-1] + knapsack(n-1, W-wt[n-1]),
+            knapsack(n-1, W)
+        )
+    else:
+        return knapsack(n-1, W)
+print(knapsack(n,w))
